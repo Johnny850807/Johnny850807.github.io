@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <script>
+    window.themeRuntime = {
+      root: "/",
+      scriptsMap: {},
+      init: {
+        status: false
+      },
+      commentRest: {
+        status: false
+      },
+      versions: {
+        theme: "2.0.3",
+        mdui: "0.4.0",
+        fetch: "3.0.0",
+        es6promise: "4.2.5+7f2b526d",
+        lightgallery: "1.0.1",
+        smoothscroll: "15.2.0"
+      }
+      
+    };
+    console.info("%cCopyright © 2018 - " + new Date().getFullYear() +" Halyul\n"+'Theme Version: ' + themeRuntime.versions.theme +'%c\nhttps://github.com/Halyul/mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+  </script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        -->
+
+  <meta charset="UTF-8">
+  <title>資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。 - 水球潘</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/images/favicon.png">
+  <link rel="icon" sizes="192x192" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <meta name="theme-color" content="#fff">
+
+  <meta name="author" content="水球潘">
+  
+  <meta name="keywords" content="blog, 水球潘, 資工, 技術, 台大,知識素養,資工,碩考,攻略">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="水球潘">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://yoursite.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。 - 水球潘 | 水球潘">
+  <meta property="og:image" content="/images/favicon.png">
+  
+
+  
+    <meta property="og:article:tag" content="知識素養">
+  
+    <meta property="og:article:tag" content="資工">
+  
+    <meta property="og:article:tag" content="碩考">
+  
+    <meta property="og:article:tag" content="攻略">
+  
+
+  
+
+  <!-- Import CSS -->
+  
+    <link rel="stylesheet" href="/css/mdui.css">
+  
+
+  
+
+</head>
+
+
+<body class="mdui-drawer-body-left mdui-theme-primary-indigo mdui-theme-accent-green">
+
+  <style>
+    #spinner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          opacity: 1;
+      -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+          transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+    main {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+      transition: opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+      display: none;
+    }
+  </style>
+  <div id="spinner">
+    <style>
+      .spinner {
+
+      -webkit-animation: rotator 1.4s linear infinite;
+              animation: rotator 1.4s linear infinite;
+      }
+
+      @-webkit-keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+      }
+      }
+
+      @keyframes rotator {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+      }
+      }
+
+      .path {
+      stroke-dasharray: 187;
+      stroke-dashoffset: 0;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+              animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+      }
+
+      @-webkit-keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+      25% {
+        stroke: #DE3E35;
+      }
+      50% {
+        stroke: #F7C223;
+      }
+      75% {
+        stroke: #1B9A59;
+      }
+      100% {
+        stroke: #4285F4;
+      }
+      }
+
+      @keyframes colors {
+      0% {
+        stroke: #4285F4;
+      }
+      25% {
+        stroke: #DE3E35;
+      }
+      50% {
+        stroke: #F7C223;
+      }
+      75% {
+        stroke: #1B9A59;
+      }
+      100% {
+        stroke: #4285F4;
+      }
+      }
+
+      @-webkit-keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+      }
+      }
+
+      @keyframes dash {
+      0% {
+        stroke-dashoffset: 187;
+      }
+      50% {
+        stroke-dashoffset: 46.75;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+      100% {
+        stroke-dashoffset: 187;
+        -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+      }
+      }
+    </style>
+    <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+  </div>
+
+  <main>
+    <div class="mdui-appbar mdui-appbar-fixed mdui-color-white mdui-shadow-0 theme-appbar">
+  <div class="mdui-toolbar theme-toolbar-top">
+    
+      <a href="/" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__burger theme-appbar__burger--arrow">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </a>
+    
+  </div>
+  <div class="mdui-toolbar theme-toolbar-bottom">
+    <span class="theme-toolbar-bottom__title">水球潘</span>
+    
+      <a href="/search.html" class="mdui-textfield-icon mdui-btn mdui-btn-icon theme-toolbar-bottom__search">
+        <i class="mdui-icon material-icons">&#xe8b6;</i>
+      </a>
+    
+  </div>
+  <div class="mdui-progress theme-appbar__progress" id="progressBar">
+    <div class="mdui-progress-indeterminate"></div>
+  </div>
+</div>
+
+    <div class="mdui-drawer mdui-drawer-full-height theme-drawer" id="drawer">
+  <!-- header -->
+  <div class="theme-drawer__header">
+  <div class="theme-drawer__header__layer-1">
+    <div class="mdui-toolbar theme-toolbar-top">
+      
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple theme-appbar__burger theme-appbar__burger--drawer theme-appbar__burger--arrow" id="drawer-back">
+          <i class="mdui-icon">
+            <span></span>
+          </i>
+        </a>
+      
+    </div>
+    <div class="mdui-toolbar theme-toolbar-bottom">
+      <span class="theme-toolbar-bottom__title">水球潘</span>
+    </div>
+  </div>
+  <div class="theme-drawer__header__layer-2" style="background-image: url(/images/bg.png)">
+    <img class="mdui-img-circle theme-drawer__header__layer-2__user__avatar" src="/images/avatar.png">
+    <div class="theme-drawer__header__layer-2__user__info">
+      <div class="theme-drawer__header__layer-2__user__info__author mdui-text-color-white-text">
+        水球潘
+      </div>
+      <div class="theme-drawer__header__layer-2__user__info__slogan mdui-text-color-white-secondary">
+        Make a little difference in the world
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="theme-drawer__warpper">
+    <!-- content -->
+    <div class="theme-drawer__warpper__content">
+  <ul class="mdui-list">
+    <a href="/" class="mdui-list-item mdui-ripple mdui-ripple-white">
+      <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+      <div class="mdui-list-item-content">首頁</div>
+    </a>
+    <a href="/archives/" class="mdui-list-item mdui-ripple mdui-ripple-white">
+      <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+      <div class="mdui-list-item-content">歸檔</div>
+    </a>
+    <ul class="mdui-list mdui-collapse" mdui-collapse="{accordion: true}">
+      
+        <div class="mdui-collapse-item ">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple mdui-ripple-white">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+            <div class="mdui-list-item-content">分類</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+          </div>
+          <div class="mdui-collapse-item-body mdui-list">
+            
+              <a href="/categories/人生與世界/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                人生與世界
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/categories/資工碩考/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                資工碩考
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>13</span>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+        <div class="mdui-collapse-item ">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple mdui-ripple-white">
+            <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+            <div class="mdui-list-item-content">標籤</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+          </div>
+          <div class="mdui-collapse-item-body mdui-list">
+            
+              <a href="/tags/學習/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                學習
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/知識素養/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                知識素養
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>2</span>
+              </a>
+            
+              <a href="/tags/資工/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                資工
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>13</span>
+              </a>
+            
+              <a href="/tags/碩考/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                碩考
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>13</span>
+              </a>
+            
+              <a href="/tags/攻略/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                攻略
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>12</span>
+              </a>
+            
+              <a href="/tags/計算機結構/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                計算機結構
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/作業系統/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                作業系統
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/演算法/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                演算法
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/台大/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                台大
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>2</span>
+              </a>
+            
+              <a href="/tags/書單/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                書單
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/Big-Picture/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                Big Picture
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/離散數學/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                離散數學
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/線性代數/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                線性代數
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/資料結構/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                資料結構
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+              <a href="/tags/心得/" class="mdui-list-item mdui-ripple mdui-ripple-white" style="display: flex">
+                心得
+                <div style="flex-grow: 1;"></div>
+                <span class="theme-menu-badge new mdui-color-theme-accent" data-badge-caption>1</span>
+              </a>
+            
+          </div>
+        </div>
+      
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple mdui-ripple-white">
+          <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+          <div class="mdui-list-item-content">年</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+          
+            <a href="/archives/2019/" class="mdui-list-item mdui-ripple">
+              2019
+            </a>
+          
+        </div>
+      </div>
+    </ul>
+  </ul>
+  
+</div>
+
+    <div class="theme-spacer"></div>
+    <!-- footer -->
+    <div class="theme-drawer__warpper__footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui" target="_blank">Halyul/MDUI</a>
+    <br>
+    <span>
+      Copyright ©
+      <span year></span>
+      水球潘
+    </span>
+    
+    
+      <br>
+      <span>
+        最後更改：3月 29, 2019
+      </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+      textContent.textContent = copyrightNow
+    } else {
+      textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+  
+</script>
+
+  </div>
+</div>
+
+    <div id="top"></div>
+
+    <script src="/js/lightgallery.min.js"></script>
+
+    <div id="barba-wrapper">
+      <div class="barba-container"  data-namespace="post">
+        
+
+
+
+  <link rel="stylesheet" href="/css/prism/darcula.min.css">
+
+
+  <link rel="stylesheet" href="/css/prism/line-number.min.css">
+
+
+<div class="theme-post">
+  <div class="theme-post__background mdui-color-theme"></div>
+  <div class="theme-post__header mdui-color-theme">
+    <div class="theme-post__header__title mdui-text-truncate">
+      資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。
+    </div>
+    <div class="theme-spacer"></div>
+    <div class="theme-post__header__actions mdui-valign">
+      <div>
+        <span>創建日期：</span>
+        <span style="float: right">3月 28, 2019</span>
+        
+        <br>
+          <span>最後更改：</span>
+          <span>3月 29, 2019</span>
+        
+      </div>
+      
+
+      
+  <div class="theme-post__share">
+    <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-menu="{target: '#post-share-menu'}">
+      <i class="mdui-icon material-icons">&#xe80d;</i>
+    </button>
+
+    <ul class="mdui-menu" id="post-share-menu">
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2019/03/28/資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。/index.html" target="_blank" class="mdui-ripple">
+                分享至Facebook
+            </a>
+        </li>
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://plus.google.com/share?url=http://yoursite.com//2019/03/28/資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。/index.html" target="_blank" class="mdui-ripple">
+                分享至Google+
+            </a>
+        </li>
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com//2019/03/28/資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。/index.html&title=資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。" target="_blank" class="mdui-ripple">
+                分享至Linkedin
+            </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li class="mdui-menu-item">
+            <a href="https://twitter.com/intent/tweet?text=資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。&url=http://yoursite.com//2019/03/28/資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。/index.html&via=水球潘" target="_blank" class="mdui-ripple">
+                分享至Twitter
+            </a>
+        </li>
+      
+
+      
+
+    </ul>
+  </div>
+
+
+    </div>
+  </div>
+  <div class="theme-post__warpper
+    
+  ">
+    <div class="theme-post__warpper__container">
+      <article class="mdui-card theme-post__card mdui-hoverable">
+        <section class="theme-post__card__warning">
+          最後更改:
+          <span id="content-warning"></span>
+          天前.
+          本文可能已經失效!
+        </section>
+        
+        
+          <section class="mdui-card-media">
+            <img src="/images/NTU.png">
+          </section>
+        
+        <section class="mdui-typo theme-post__card__content">
+          <h2 id="我該補習嗎？如果你有知識素養你就不必補習。"><a href="#我該補習嗎？如果你有知識素養你就不必補習。" class="headerlink" title="我該補習嗎？如果你有知識素養你就不必補習。"></a>我該補習嗎？如果你有知識素養你就不必補習。</h2><p>這篇文章希望能幫忙你檢測自己<strong>是否有必要補習</strong>。<br>補習是非常貴的──好幾萬。</p>
+<p>但對有些人來說，他已經做好了心態的建設，卻還是需要花非常多的時間來從自學中成長。<br>因此我不認為補習是一種奢侈，對有些人來說，也許是更完美跟扎實的起點。</p>
+<p>我將「是否需要補習」這個命題切成四個元素：<strong>「知識素養」、「自律程度」、「剩餘時間」、「金錢」</strong></p>
+<p>首先來窮舉一下，補習的優勢有哪些？</p>
+<h2 id="補習的優勢有哪些？"><a href="#補習的優勢有哪些？" class="headerlink" title="補習的優勢有哪些？"></a>補習的優勢有哪些？</h2><ol>
+<li>你會感受到競爭力而時時刻刻緊盯自己。</li>
+<li>你的進度會些許地受到管控。</li>
+<li>為了不浪費這筆錢，你會更積極。</li>
+<li>有些老師教得非常好。（e.g. 黃子嘉老師）</li>
+<li>補習班老師會針對考古題們做詳細的講解。（題庫班又是一筆錢）</li>
+</ol>
+<p><strong>就這些而已。</strong></p>
+<p>1, 2, 3 對應的元素是　「自律程度」<br>4, 5 對應的元素是　「知識素養」以及「剩餘時間」(老師教得好會幫你省時間)<br>意思是，如果你不夠自律，則你很需要1, 2, 3的補習優勢。<br>如果你不太會自學或你擁有的時間沒有這麼充裕，則你很需要4, 5的補習優勢。</p>
+<p>但其實自律的人，只需要幾個月的時間，都會在知識素養上有很不錯的成長跟體會，<br>因為為了達到「好成果」，自律的人願意照著我說的話去做，照著正確的學習模式前進。<br>因此最後「是否需要補習」這個命題的考慮元素就可以寫成是</p>
+<p><strong>「金錢」　vs　「自律程度」Ｘ「剩餘時間」的權衡</strong></p>
+<p>我會先幫你檢測你的知識素養，<br>再告訴你到底要多自律，<br>最後再看看你所擁有的時間，<br>來決定你是否需要補習。</p>
+<hr>
+<h2 id="知識素養為何？"><a href="#知識素養為何？" class="headerlink" title="知識素養為何？"></a>知識素養為何？</h2><p><strong>知識素養就是，當你在吸收一件知識時，你會為了這段知識，去主動進行哪些層次的吸收。</strong><br><strong>你在吸收的過程，你會叮嚀自己一定要進行哪種訓練，而不是讓知識在腦袋裡空泛地打轉著。</strong><br>因此知識素養會直接決定你的自學能力好不好，你到底需不需要老師來提醒你重點？</p>
+<hr>
+<h2 id="那我應該為了培養知識素養，而參加補習班嗎？"><a href="#那我應該為了培養知識素養，而參加補習班嗎？" class="headerlink" title="那我應該為了培養知識素養，而參加補習班嗎？"></a>那我應該為了培養知識素養，而參加補習班嗎？</h2><p><strong>不應該。</strong><br><strong>參加補習班，並不會培養知識素養。</strong></p>
+<p>補習班的學生們，很多人因為沒有搞懂心態的部分，<br>「心裡扎根處其實並沒有想跟科目們做朋友」，所以也不具有知識素養。<br>不具備知識素養的學生們，常常就如我前文所述「試水溫」而在台大一戰落敗的人。</p>
+<p>記住「補習班只是有好的師資跟好的講解，對於沒有知識素養的人，永遠都只是題海戰術而已。」<br>老師塞了什麼，就聽了什麼，這樣的過程在許多人身上淺顯易見，<br><strong>「心態一開始就扎錯了，所以只好用補習的方式強迫自己能跟上所需知識。」</strong><br>這是很多人待在補習班的原因，卻肯定不是看著這篇文章的你所期許的。</p>
+<p>因此位於出發點的你，如果能真的搞懂何為知識素養，搞不好根本不需要補習了。<br>而這系列的攻略７～１２，則是針對各個科目提供的「知識素養叮嚀及攻略」，不用擔心：）。</p>
+<hr>
+<h2 id="檢測並體會自己的知識素養"><a href="#檢測並體會自己的知識素養" class="headerlink" title="檢測並體會自己的知識素養"></a>檢測並體會自己的知識素養</h2><p>請先去聽聽看交大莊重的線性代數課程的前<strong>兩</strong>堂課程， (<a href="https://www.youtube.com/watch?v=AfY1ak89fwU&amp;feature=youtu.be&amp;list=PLj6E8qlqmkFtjxknKFtdxc1_SxNBXgpbo&amp;t=1" target="_blank" rel="noopener">Link</a>)<br>(這堂課我會在<a href="../../../../2019/03/28/%E8%B3%87%E5%B7%A5%E7%A2%A9%E8%80%83%E6%94%BB%E7%95%A5[4]%E3%80%80%E5%90%84%E7%A7%91%E7%9B%AE%E6%9B%B8%E5%96%AE%E5%8F%8A%E9%96%8B%E6%94%BE%E5%BC%8F%E8%AA%B2%E7%A8%8B/">書單推薦</a>中再詳細介紹)<br>認真的，先聽聽看，反正遲早都要學，現在就先花了1小時半去檢測一下自己的知識素養，<br>跟看電影一樣放鬆看。（反正這場冒險才剛開始…）</p>
+<hr>
+<p>在課程的初期(影片2──向量空間)，你會為即將面臨的知識感到興奮，<br>而將專注力放在莊重在黑板上的一舉一動中。</p>
+<p>但隨之到來的，卻會是一連串非常嚴謹又學術的數學符號，<br>你嘗試看著看著，卻發現自己好像不太能將莊重說出來的東西，放入自己腦袋中。<br>你可能開始想轉1.5倍速，或者開始擔憂著自己到底在學些什麼。</p>
+<p>這時候，便是為什麼我要告訴你知識素養有多麼重要了。<br>──<strong>你其實不是聽不懂，而是你沒有嘗試在跟你的腦袋相處。</strong></p>
+<p><strong>「腦袋中有股特別的能量叫做潛意識，學習成效跟潛意識有非常大的關係」</strong>　（對我來說）<br>(之後再講解我是如何與潛意識相處，來達到<strong>「每個科目都只讀一次」</strong>。)<br><strong>──你的筆記本呢？你的自動筆呢？</strong></p>
+<p>聽著，<strong>「你不可能只用眼睛，就讓自己熟悉一個科目」</strong>。<br>很多人誤會了手抄筆記的目的，甚至連抄了一堆筆記的補習生，也把心態放在了錯誤的地方。<br>心態只要錯誤，腦袋便不會扎實地吸收。</p>
+<p>你要非常勤奮，因為你是真心地想跟這個科目做朋友，<br>你應該要<strong>很真誠地在紙上寫下你想理解的文字</strong>。<br>基本上，莊重在黑板上所抄的東西，都是好朋友，緩慢地抄、緩慢地了解吧！</p>
+<p><strong>「學習不應該是一個匆忙的過程」</strong><br>我想，如果你已經試著去觀看莊重的課程，應該也會感受到心態的重要性。<br>體會到重要性的你，如果足夠自律，就能在一個月內迅速矯正過來。<br>等你閱讀完這篇文章，決定是否要補習之後，就繼續看<a href="../../../../2019/03/29/學習的心態會影響你一輩子──知識素養的培養/">這篇</a>吧！</p>
+<h2 id="到底要多自律？"><a href="#到底要多自律？" class="headerlink" title="到底要多自律？"></a>到底要多自律？</h2><p>每個人一定都對自己的作息有相當大的期許，<br>希望自己能早起讀書，從早上8點讀到晚上9點。</p>
+<p><strong>不需要啦！</strong></p>
+<p>我跟另一位都是大四才決定報考碩士的，<br>在當時已是7月後畢業狀態（延期兵役），所以「每天都是假日」。</p>
+<p>但儘管每天都是假日了，<br><strong>一天內的動能還是不高</strong>，就好像動能是固定的，用完就沒了這樣。<br>「我已經做了很多的自我研究，我只要讀書超過6小時，接下來再吸收進去的知識就會成為泡沫。」<br>因此你不需要這麼多時間，你一天只要往前走一小步就夠了。</p>
+<p>我做得最好的一天就是分三個時段讀書，<br>9:00~12:00、14:00~17:00、19:00~22:00，<br>做得最差的一天就是只有晚上會讀書，<br>然而一個月裡面有60%的日子都是差勁的哈哈哈。</p>
+<p>──動能越少，你就越浮躁，<br>好家在我上了台大，所以我有資格可以告訴你，不需要這麼拚，考的不是背科。</p>
+<p>在考完試之後，我就多了一條座右銘<br><strong>：「預測未來的方法很簡單…<br>制定計畫、完成計畫，管他的變動。」</strong></p>
+<p>人常常會慌張、讀書浮躁、趕進度、一個理論一個理論不停讀，一直翻頁翻頁翻頁，<br>最後吸收到甚少甚少的觀念。<br>會有這樣在心態上不自律的結果，都是因為「你沒做計劃表」。</p>
+<p>於是，我不要你自律，我要你學會估時程、做計劃表。<br>而且計劃表中的每一天，還要足夠寬鬆──<br>你先試試看制定：一天只讀完一個小章節。（一章節超多）<br>然後一路從今天排到月底，你就會知道，到月底時，大概一個科目就快讀完了…。<br>因此你就要去慢慢思考，到底每天要讀多少，<strong>你才不會浮躁</strong>？</p>
+<p><strong>請注意重點，你排進度時，不是為了「讀完」，而是你希望這樣的進度安排夠寬鬆，<br>能讓自己不要浮躁，真誠地學習，而時程表又會告訴你，這樣寬鬆的安排，能在x月x日讀完。<br>如果一浮躁，你就會開始手跟腦袋分開，開始跳過證明細節──最後跟其他人一樣落敗。<br>（既然時程表都告訴你能完成了，那就慢慢地、開開心心地讀阿xD。）</strong></p>
+<p>如果你擁有的時間有半年左右，則你會發現慢慢讀是被允許的。（就我的經驗）<br><strong>甚至計畫就算變動很多，還是能輕鬆救回來。</strong>（預測未來的技巧之一：預留的寬鬆時程就是為了補救）<br>但若你的時程比半年還緊縮，你可能就要偶爾衝刺偶爾寬鬆了。</p>
+<p>「學會做自己的經紀人，了解自己最有效益的學習節奏，那你還需要補習班嗎？」</p>
+<hr>
+<h3 id="所以咧？"><a href="#所以咧？" class="headerlink" title="所以咧？"></a>所以咧？</h3><p>為了讓上述討論能得到一個結論，</p>
+
+        </section>
+
+        
+          <section class="theme-post__card__license mdui-typo">
+            <span>
+              許可協議：
+              
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
+              
+            </span>
+            <br>
+            <span>文章鏈接：<a href="http://yoursite.com/2019/03/28/資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。/">http://yoursite.com/2019/03/28/資工碩考攻略[3]　我該補習嗎？如果你有知識素養你就不必補習。/</a></span>
+            
+          </section>
+        
+
+        
+          <section class="mdui-card-actions theme-post__card__actions">
+            
+            <div class="theme-spacer"></div>
+            
+              <div class="mdui-chip theme-post__card__chip--bg theme-post__card__chip--margin">
+                <span class="mdui-chip-icon theme-post__card__chip--bg"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
+              </div>
+              <div class="mdui-typo">
+                
+                  <a href="/categories/資工碩考/">
+                    <span>資工碩考</span>
+                  </a>
+                
+              </div>
+            
+            
+              <div class="mdui-chip theme-post__card__chip--bg theme-post__card__chip--margin">
+                <span class="mdui-chip-icon theme-post__card__chip--bg"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
+              </div>
+              <div class="mdui-typo">
+                
+                  <a href="/tags/知識素養/">
+                    <span>知識素養</span>
+                  </a>
+                
+                  <a href="/tags/資工/">
+                    <span>資工</span>
+                  </a>
+                
+                  <a href="/tags/碩考/">
+                    <span>碩考</span>
+                  </a>
+                
+                  <a href="/tags/攻略/">
+                    <span>攻略</span>
+                  </a>
+                
+              </div>
+            
+          </section>
+        
+
+        
+          
+            <script type="text/javascript">
+              themeRuntime.commentRest.function = function (newIdentifier, newUrl, newTitle) {
+                return
+              }
+            </script>
+          
+        
+      </article>
+      
+        <div class="mdui-color-theme theme-post__toc">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x6211;&#x8A72;&#x88DC;&#x7FD2;&#x55CE;&#xFF1F;&#x5982;&#x679C;&#x4F60;&#x6709;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x4F60;&#x5C31;&#x4E0D;&#x5FC5;&#x88DC;&#x7FD2;&#x3002;" data-href="#&#x6211;&#x8A72;&#x88DC;&#x7FD2;&#x55CE;&#xFF1F;&#x5982;&#x679C;&#x4F60;&#x6709;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x4F60;&#x5C31;&#x4E0D;&#x5FC5;&#x88DC;&#x7FD2;&#x3002;"><span class="toc-number"></span> <span class="toc-text">1. &#x6211;&#x8A72;&#x88DC;&#x7FD2;&#x55CE;&#xFF1F;&#x5982;&#x679C;&#x4F60;&#x6709;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x4F60;&#x5C31;&#x4E0D;&#x5FC5;&#x88DC;&#x7FD2;&#x3002;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x88DC;&#x7FD2;&#x7684;&#x512A;&#x52E2;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;" data-href="#&#x88DC;&#x7FD2;&#x7684;&#x512A;&#x52E2;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">2. &#x88DC;&#x7FD2;&#x7684;&#x512A;&#x52E2;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x70BA;&#x4F55;&#xFF1F;" data-href="#&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x70BA;&#x4F55;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">3. &#x77E5;&#x8B58;&#x7D20;&#x990A;&#x70BA;&#x4F55;&#xFF1F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x90A3;&#x6211;&#x61C9;&#x8A72;&#x70BA;&#x4E86;&#x57F9;&#x990A;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#xFF0C;&#x800C;&#x53C3;&#x52A0;&#x88DC;&#x7FD2;&#x73ED;&#x55CE;&#xFF1F;" data-href="#&#x90A3;&#x6211;&#x61C9;&#x8A72;&#x70BA;&#x4E86;&#x57F9;&#x990A;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#xFF0C;&#x800C;&#x53C3;&#x52A0;&#x88DC;&#x7FD2;&#x73ED;&#x55CE;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">4. &#x90A3;&#x6211;&#x61C9;&#x8A72;&#x70BA;&#x4E86;&#x57F9;&#x990A;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#xFF0C;&#x800C;&#x53C3;&#x52A0;&#x88DC;&#x7FD2;&#x73ED;&#x55CE;&#xFF1F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x6AA2;&#x6E2C;&#x4E26;&#x9AD4;&#x6703;&#x81EA;&#x5DF1;&#x7684;&#x77E5;&#x8B58;&#x7D20;&#x990A;" data-href="#&#x6AA2;&#x6E2C;&#x4E26;&#x9AD4;&#x6703;&#x81EA;&#x5DF1;&#x7684;&#x77E5;&#x8B58;&#x7D20;&#x990A;"><span class="toc-number"></span> <span class="toc-text">5. &#x6AA2;&#x6E2C;&#x4E26;&#x9AD4;&#x6703;&#x81EA;&#x5DF1;&#x7684;&#x77E5;&#x8B58;&#x7D20;&#x990A;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5230;&#x5E95;&#x8981;&#x591A;&#x81EA;&#x5F8B;&#xFF1F;" data-href="#&#x5230;&#x5E95;&#x8981;&#x591A;&#x81EA;&#x5F8B;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">6. &#x5230;&#x5E95;&#x8981;&#x591A;&#x81EA;&#x5F8B;&#xFF1F;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x6240;&#x4EE5;&#x54A7;&#xFF1F;" data-href="#&#x6240;&#x4EE5;&#x54A7;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">6.1. &#x6240;&#x4EE5;&#x54A7;&#xFF1F;</span></a></li></ol></li></ol>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="theme-spacer"></div>
+
+  
+    <div class="mdui-color-theme theme-post__toc-fab">
+  <button class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" mdui-menu="{target: '#toc-fab-menu', fixed: true}" id="toc-fab">
+    <i class="mdui-icon material-icons">&#xe242;</i>
+  </button>
+  <ul class="mdui-menu mdui-typo theme-post__toc-fab__menu" id="toc-fab-menu" style="padding: 8px;max-height: 80%">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x6211;&#x8A72;&#x88DC;&#x7FD2;&#x55CE;&#xFF1F;&#x5982;&#x679C;&#x4F60;&#x6709;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x4F60;&#x5C31;&#x4E0D;&#x5FC5;&#x88DC;&#x7FD2;&#x3002;" data-href="#&#x6211;&#x8A72;&#x88DC;&#x7FD2;&#x55CE;&#xFF1F;&#x5982;&#x679C;&#x4F60;&#x6709;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x4F60;&#x5C31;&#x4E0D;&#x5FC5;&#x88DC;&#x7FD2;&#x3002;"><span class="toc-number"></span> <span class="toc-text">1. &#x6211;&#x8A72;&#x88DC;&#x7FD2;&#x55CE;&#xFF1F;&#x5982;&#x679C;&#x4F60;&#x6709;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x4F60;&#x5C31;&#x4E0D;&#x5FC5;&#x88DC;&#x7FD2;&#x3002;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x88DC;&#x7FD2;&#x7684;&#x512A;&#x52E2;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;" data-href="#&#x88DC;&#x7FD2;&#x7684;&#x512A;&#x52E2;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">2. &#x88DC;&#x7FD2;&#x7684;&#x512A;&#x52E2;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x70BA;&#x4F55;&#xFF1F;" data-href="#&#x77E5;&#x8B58;&#x7D20;&#x990A;&#x70BA;&#x4F55;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">3. &#x77E5;&#x8B58;&#x7D20;&#x990A;&#x70BA;&#x4F55;&#xFF1F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x90A3;&#x6211;&#x61C9;&#x8A72;&#x70BA;&#x4E86;&#x57F9;&#x990A;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#xFF0C;&#x800C;&#x53C3;&#x52A0;&#x88DC;&#x7FD2;&#x73ED;&#x55CE;&#xFF1F;" data-href="#&#x90A3;&#x6211;&#x61C9;&#x8A72;&#x70BA;&#x4E86;&#x57F9;&#x990A;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#xFF0C;&#x800C;&#x53C3;&#x52A0;&#x88DC;&#x7FD2;&#x73ED;&#x55CE;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">4. &#x90A3;&#x6211;&#x61C9;&#x8A72;&#x70BA;&#x4E86;&#x57F9;&#x990A;&#x77E5;&#x8B58;&#x7D20;&#x990A;&#xFF0C;&#x800C;&#x53C3;&#x52A0;&#x88DC;&#x7FD2;&#x73ED;&#x55CE;&#xFF1F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x6AA2;&#x6E2C;&#x4E26;&#x9AD4;&#x6703;&#x81EA;&#x5DF1;&#x7684;&#x77E5;&#x8B58;&#x7D20;&#x990A;" data-href="#&#x6AA2;&#x6E2C;&#x4E26;&#x9AD4;&#x6703;&#x81EA;&#x5DF1;&#x7684;&#x77E5;&#x8B58;&#x7D20;&#x990A;"><span class="toc-number"></span> <span class="toc-text">5. &#x6AA2;&#x6E2C;&#x4E26;&#x9AD4;&#x6703;&#x81EA;&#x5DF1;&#x7684;&#x77E5;&#x8B58;&#x7D20;&#x990A;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x5230;&#x5E95;&#x8981;&#x591A;&#x81EA;&#x5F8B;&#xFF1F;" data-href="#&#x5230;&#x5E95;&#x8981;&#x591A;&#x81EA;&#x5F8B;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">6. &#x5230;&#x5E95;&#x8981;&#x591A;&#x81EA;&#x5F8B;&#xFF1F;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link mdui-list-item mdui-ripple theme-post__toc__content__link" href="#&#x6240;&#x4EE5;&#x54A7;&#xFF1F;" data-href="#&#x6240;&#x4EE5;&#x54A7;&#xFF1F;"><span class="toc-number"></span> <span class="toc-text">6.1. &#x6240;&#x4EE5;&#x54A7;&#xFF1F;</span></a></li></ol></li></ol>
+  </ul>
+</div>
+
+  
+
+  
+    <div class="theme-post__pagination mdui-color-theme">
+  
+    <div class="theme-post__pagination__prev mdui-ripple mdui-valign">
+      <a href="/2019/03/28/資工碩考攻略[1]　冒險的開始──前言/" class="theme-post__pagination__prev__content mdui-text-left">
+        <div>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">新文章</span>
+        </div>
+        <div class="mdui-typo-title mdui-text-truncate">
+          資工碩考攻略[1]　冒險的開始──前言
+        </div>
+      </a>
+    </div>
+  
+
+  
+    <div class="theme-post__pagination__next mdui-ripple mdui-valign">
+      <a href="/2019/03/28/資工碩考攻略[12] 演算法──曲高和寡的科目就是我們發揮的時刻！/" class="theme-post__pagination__next__content mdui-text-right">
+        <div>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">舊文章</span>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
+        </div>
+        <div class="mdui-typo-title mdui-text-truncate">
+          資工碩考攻略[12] 演算法──曲高和寡的科目就是我們發揮的時刻！
+        </div>
+      </a>
+    </div>
+    
+</div>
+
+  
+
+  
+</div>
+<script type="text/javascript">
+  themeRuntime.scriptsMap.post = [];
+  if (document.querySelector('.theme-post__toc-fab__menu > ol') !== null && document.querySelector('.theme-post__toc > ol') !== null) {
+    tocHighlight()
+    function tocHighlight() {
+      var timer;
+      function doWork() {
+        listens.forEach(function(value, index) {
+          value[1]();
+          value[0].classList.remove("mdui-list-item-active");
+        })
+        let actionToc = (listens[listens.reduce(function(r, v, index) {
+          if (v[2] == true) {
+            return index;
+          } else return r;
+        }, undefined)] || [])[0] || listens[0][0];
+        actionToc.classList.add("mdui-list-item-active");
+        if(actionToc.getClientRects().length == 0)return;
+        showToc(actionToc);
+      }
+      function showToc(toc) {
+        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
+        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
+        let offset = 0;
+        if (offsetTop < 0) offset = offsetTop;
+        if (offsetBottom > 0) offset = offsetBottom;
+        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var now = cardToc.scrollTop;
+          var speed = (targetTop - now) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (Math.abs(now - targetTop) < 1) {
+            clearInterval(timer);
+          }
+          cardToc.scrollTop = now + speed;
+        }, 30);
+      }
+      var listens = [];
+      var cardToc = document.querySelector('.theme-post__toc');
+      var links = cardToc.querySelectorAll(".theme-post__toc__content__link");
+      var toclist = document.querySelector(".theme-post__toc > ol");
+      Array.prototype.forEach.call(links, function(value, index) {
+        var id = (value.getAttribute("href") || "#").slice(1);
+        var element = document.getElementById(id);
+        listens.push([value, function() {
+          var readed = false;
+          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
+            readed = true;
+          } else {
+            readed = false;
+          }
+          listens[index][2] = readed;
+        }, false])
+      })
+      doWork();
+      window.addEventListener("scroll", doWork)
+      var listener = {
+        function:  doWork,
+        event: 'scroll',
+        el: window,
+        removed: false
+      }
+      themeRuntime.scriptsMap.post.push(listener)
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var postLastModifiedDate = 1553871955843
+    var today = (new Date()).getTime()
+    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
+    if (difference >= 100) {
+      document.querySelector('.theme-post__card__warning').style.display = 'block'
+      document.querySelector('#content-warning').textContent = difference
+    }
+  })();
+</script>
+
+<script type="text/javascript">
+  var images = document.querySelectorAll('.theme-post__card__content img')
+  for (i = 0; i < images.length; i++) {
+    //console.log('image added', i)
+    images[i].addEventListener("click", openLG);
+    var listener = {
+      function:  openLG,
+      event: 'click',
+      el: images[i],
+      removed: false
+    }
+    themeRuntime.scriptsMap.post.push(listener)
+  }
+  function openLG() {
+    var img_src = this.getAttribute('src');
+    var img_alt = this.getAttribute('alt');
+    lightGallery(this, {
+      dynamic: true,
+      counter: false,
+      dynamicEl: [{
+        "src": img_src,
+        'subHtml': "<span author>水球潘</span><div descr>" + img_alt + "</div>"
+      }],
+    });
+  }
+</script>
+
+
+
+
+      </div>
+    </div>
+  </main>
+
+  <div id="outdated" style="z-index: 9999;">
+    <h6>瀏覽器已無法正常顯示網頁內容.</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">現在就開始</a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="關閉">&times;</a></p>
+  </div>
+  <!-- import js -->
+
+
+  <script src="/js/outdatedbrowser.min.js"></script>
+
+
+
+  
+    <script src="/js/js.barba.min.js"></script>
+    <script type="text/javascript">
+      Barba.Utils.errorPageUrl = '/404.html';
+    </script>
+  
+
+
+<!-- theme js -->
+<script type="text/javascript">
+  (function() {
+    var appbarTopFlag = false;
+    var appbarEl = document.querySelector('.theme-appbar');
+    function appbarShadow() {
+      var bodyScrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      if (bodyScrolled > 0 && !appbarTopFlag) {
+        appbarEl.classList.add('theme-appbar--shadow');
+        appbarTopFlag = true;
+      } else if (bodyScrolled === 0 && appbarTopFlag) {
+        appbarEl.classList.remove('theme-appbar--shadow');
+        appbarTopFlag = false;
+      }
+    }
+    appbarShadow()
+    window.addEventListener('scroll', appbarShadow);
+  })();
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+  document.querySelector('body').classList.add('theme-loaded')
+</script>
+
+
+
+</body>
+</html>
